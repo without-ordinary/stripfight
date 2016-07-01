@@ -69,18 +69,19 @@ string GLOBALS;
 #define GLOBAL_HP "2"            // Int Current HP
 #define GLOBAL_MANA "3"            // Int Current Mana
 #define GLOBAL_BF "4"            // Int Global bitfield
-   #define GBF_GAME_IN_PROGRESS 1         // Game currently in progress
-   #define GBF_MY_TURN 2               // Currently my turn
-   #define GBF_ABILITY_USED 4            // Has used special ability
-   #define GBF_RLV_INITIALIZED 8         // RLV has been initialized
+   #define GBF_GAME_IN_PROGRESS 1       // Game currently in progress
+   #define GBF_MY_TURN 2                // Currently my turn
+   #define GBF_ABILITY_USED 4           // Has used special ability
+   #define GBF_RLV_INITIALIZED 8        // RLV has been initialized
    #define GBF_HOSTING 16               // I am hosting so I randomize who starts
    #define GBF_GAME_ENDED 32            // Game has ended, waiting for punishment etc
    #define GBF_LOST 64                  // Player has lost
-   #define GBF_HAS_BLOCKCARD 128         // Player has a block card set
-   #define GBF_MISSING_JASX 256         // Missing a JasX account
+   #define GBF_HAS_BLOCKCARD 128        // Player has a block card set
+   //#define GBF_MISSING_JASX 256         // Missing a JasX account
    #define GBF_HAS_CHARM 512            // Player has charm set
-   #define GBF_HAS_COMEBACK 1024         // Player has comeback set
-   #define GBF_BONUS_TURN 2048            // Player has bonus turn
+   #define GBF_HAS_COMEBACK 1024        // Player has comeback set
+   #define GBF_BONUS_TURN 2048          // Player has bonus turn
+   #define GBF_HAS_MANACARD 4096        // Player has a mana card on hand
 #define GLOBAL_ENEMY_BF "9"
 #define GLOBAL_ENEMY_ARMOR "5"      // Same as armor, but for enemy      
 #define GLOBAL_ENEMY_MANA "6"      // Same as mana, but for enemy
