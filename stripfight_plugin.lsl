@@ -8,7 +8,7 @@ integer CHAN_GLOBAL = 0xB00B5;
 
 //Events
 #define EVT_STATUS_CHANGE "0"   // †* {various} Raised whenever a players status changes, see GLOBALS (GLOBAL_FX is not sent to public)
-#define EVT_GAME_STARTED "1"      // {"a":(array)ability_ids} Raised when the game starts
+#define EVT_GAME_STARTED "1"      // {"a":(array)abilities} Raised when the game starts. See Ability object for definitions on the ability objects.
 #define EVT_GAME_ENDED "2"         // null Raised when game ends and any punishment is finished (reset)
 #define EVT_DAMAGE_TAKEN "3"      // {"d":hp_damage,"a":armor_damage, "s":slot} Raised when I take damage
 #define EVT_ANIM "4"            // {"a":animName, "s":started} Raised when an animation is started or force-stopped
@@ -148,10 +148,9 @@ CODE: [SELECT ALL] [EXPAND/COLLAPSE] [DOWNLOAD] (UNTITLED)
       ]));
 */
 
-#define TASK_SET_GENITALS "0"      // ! Deprecated... sort of, use TASK_SET_CONFIG instead ! (int)bitfield - Bitfield combination of GPB_PENIS and GPB_VAGINA See Config bitfield flags
-#define TASK_SET_CONFIG "0"         // (int)bitfield - Bitfield combination of GPB_* flags except GPB_NOBOTS. See Config bitfield flags
-#define TASK_SET_FOLDER "1"         // (string)folder - Set RLV folder to this
-#define TASK_SET_CLOTHES "2"      // (bool)clothed - Only works out of combat. Does config->test naked/test clothed
+#define TASK_SET_CONFIG "0"         // ! Deprecated, use the JasX HUD. (int)bitfield - Bitfield combination of GPB_* flags except GPB_NOBOTS. See Config bitfield flags
+#define TASK_SET_FOLDER "1"         // ! Deprecated, use the JasX HUD. (string)folder - Set RLV folder to this
+#define TASK_SET_CLOTHES "2"      // ! Deprecated, use the JasX HUD. (bool)clothed - Only works out of combat. Does config->test naked/test clothed
 #define TASK_DUEL_ACCEPT "3"      // (bool)accept - Accept or decline any standing duel request. If the person requesting has the no bot setting enabled, setting accept to TRUE will generate the ERR_DUEL_ACCEPT error
 // Note: Emulate press does not work in a bot disabled game. These commands are re-enabled after a player wins, so you can still use automated punishments
 #define TASK_EMULATE_PRESS "4"      // {"b":(str)BUTTON_*, "s":(bool)touch_start} - Emulates a button press on the HUD. if touch_start is false, it will instead parse as touch_end
