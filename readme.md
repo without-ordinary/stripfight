@@ -92,5 +92,7 @@ llRegionSayTo(llGetOwner(), playerChan(), llList2Json(JSON_OBJECT, [
 ]));
 ```
 
+## Outfit management
+Outfit management is handled by the JasX HUD now. See https://github.com/JasXSL/JasX-HUD
 
 
