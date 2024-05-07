@@ -101,7 +101,18 @@ string GLOBALS;
 #define GLOBAL_CLASS "c"         // Player class
 #define GLOBAL_ENEMY_CLASS "d"      // Enemy class
 #define GLOBAL_FX "e"            // Assoc array see useful values
-
+#define GLOBAL_ENEMY_SPECCARD "f"	// Card associated with tier 2 ability - -1 for hidden
+#define GLOBAL_HANDICAPS "g"		// [(int)myhandicap,(int)enemyhandicap] - Level of handicap
+	#define HANDICAP_NONE 0
+	#define HANDICAP_SMALL 1		// 25%
+	#define HANDICAP_MED 2			// 50%
+	#define HANDICAP_LARGE 3		// 75%
+#define GLOBAL_ROUNDS "h"			// (int) nr rounds played by user
+#define GLOBAL_PLAYERTURN "i"		// (int)turn
+	#define PLAYERTURN_MINE 1
+	#define PLAYERTURN_OPPONENT 0
+#define GLOBAL_PLAYING_FX "j"		// (bool)playing - Currently drawing our card attacks
+#define GLOBAL_NRS_DISABLED "k"		// (bool)nrs_disabled - Disables the numbers overlay
 
 
 //EVT_PUNISHMENT flags:
